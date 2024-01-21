@@ -11,30 +11,35 @@ type Story = StoryObj<typeof meta>;
 
 export const ExtraSmallIcons : Story = {
     args: {
-        size: "xs"
+        size: "xs",
+        icon: "warning"
     }
 }
 
 export const SmallIcons : Story = {
     args: {
-        size: "s"
+        size: "s",
+        icon: "warning"
     }
 }
 
 export const MediumIcons : Story = {
     args: {
-        size: "m"
+        size: "m",
+        icon: "warning"
     }
 }
 
 export const largeIcons : Story = {
     args: {
-        size: "l"
+        size: "l",
+        icon: "warning"
     }
 }
 
 export const ExtralargeIcons : Story = {
     args: {
-        size: "xl"
+        size: "xl",
+        icon: "warning"
     }
 }
