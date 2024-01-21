@@ -32,3 +32,10 @@
 .body2
     font-size: 16px
     line-height: 24px
+
+=fontWeight()
+    $fontWeights: (400, 500, 600, 700)
+    
+    @each $weight in $fontWeights
+    .fw-#{$weight}
+        font-weight: #{$weight} !important
