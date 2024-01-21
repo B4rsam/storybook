@@ -166,7 +166,7 @@ const Icon: FC<IIcon> = ({size, children, icon, ...other}) => {
             case 'arrowright':
                 return <img src={Arrowright} alt="Arrowright icon" />;
             default:
-                throw new Error("No img");
+                return "No img";
         }
     }
 
