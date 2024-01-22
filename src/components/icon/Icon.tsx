@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import {FC, HTMLAttributes} from 'react';
 import './icon.sass';
 import Warning from '../../assets/icons/Warning.svg';
 import Video from '../../assets/icons/Video.svg';
@@ -54,12 +54,12 @@ import Arrowright from '../../assets/icons/Arrow Right.svg';
 
 type iconSize = "xs" | "s" | "m" | "l" | "xl";
 type iconPack = "warning" | "video" | "unlock" | "trash" | "trash4" | "stats" | "star" | "share" | "settings" | "search" | "rotate" | "rotate2" | "puzzle" | "plus" | "pin" | "notes" | "more" | "minus" | "menu" | "map" | "lock" | "loading" | "list" | "info" | "inbox" | "inboxarrow" | "home" | "help" | "finder" | "filter" | "eye" | "export" | "drag" | "download" | "download2" | "dashboard" | "close" | "clock" | "circleplus" | "circleminus" | "circlecheck" | "circlearrowright" | "chevron2" | "check" | "camera" | "calender" | "briefcase" | "box" | "bin" | "bell" | "arrowright";
-interface IIcon extends HTMLDivElement {
+interface IIcon extends HTMLAttributes<HTMLDivElement> {
     size: iconSize;
     icon: iconPack;
 }
 
-const Icon: FC<IIcon> = ({size, children, icon, ...other}) => {
+const Icon: FC<IIcon> = ({size, icon, ...other}) => {
 
     const getIcon = () => {
         switch(icon) {

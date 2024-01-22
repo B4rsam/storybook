@@ -1,20 +1,19 @@
-import { FC } from 'react'
+import {FC, HTMLAttributes} from 'react'
 import './shadow.sass'
 
 type Shadows = 1 | 2;
-interface IShadow extends HTMLDivElement {
+interface IShadow extends HTMLAttributes<HTMLDivElement> {
     type : Shadows;
 }
 
-const ShadowBox : FC<IShadow> = ({type, children, ...other}) => {
+const ShadowBox : FC<IShadow> = ({type = 2, children, ...other}) => {
     const shadowType = () => {
         switch(type) {
             case 1:
                 return "heavyShadow";
             case 2:
-                return "lightShadow";
             default:
-                break;
+                return "lightShadow";
         }
     }
     return (
