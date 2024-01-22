@@ -1,11 +1,12 @@
-import { FC } from "react";
+import { FC, HTMLAttributes, ReactNode } from "react";
 import './button.sass';
 
 type buttons = "primary" | "secondary" | "tertiary";
 type buttonSize = "small" | "medium" | "large";
-interface IButton extends HTMLButtonElement {
+interface IButton extends HTMLAttributes<HTMLButtonElement> {
     btntype : buttons;
     size : buttonSize;
+    children : ReactNode | undefined;
 }
 
 const Button : FC<IButton> = ({btntype, children, size, ...other}) => {

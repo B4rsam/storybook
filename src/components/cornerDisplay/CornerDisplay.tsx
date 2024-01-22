@@ -1,9 +1,10 @@
-import { FC } from 'react';
+import { FC, HTMLAttributes, ReactNode } from "react";
 import './cornerdisplay.sass';
 
 type validTypes = "card" | "input";
-interface ICorner extends HTMLDivElement {
+interface ICorner extends HTMLAttributes<HTMLDivElement> {
     type: validTypes;
+    children: ReactNode | undefined
 }
 
 const CornerDisplay : FC<ICorner> = ({type, children, ...other}) => {

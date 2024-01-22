@@ -1,8 +1,8 @@
-import { FC } from "react";
+import { FC, HTMLAttributes} from "react";
 import './checkmark.sass';
 
 type checkSize = "small" | "medium";
-interface ICheck extends HTMLInputElement {
+interface ICheck extends HTMLAttributes<HTMLInputElement> {
     boxSize: checkSize;
 }
 
