@@ -3,7 +3,7 @@ import './shadow.sass'
 
 type Shadows = 1 | 2;
 interface IShadow extends HTMLAttributes<HTMLDivElement> {
-    type : Shadows;
+    type?: Shadows;
     children: ReactNode | undefined;
 }
 
