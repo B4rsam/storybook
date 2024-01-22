@@ -37,7 +37,7 @@ export const largeIcons : Story = {
     }
 }
 
-export const ExtralargeIcons : Story = {
+export const ExtraLargeIcons : Story = {
     args: {
         size: "xl",
         icon: "warning"
