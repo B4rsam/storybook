@@ -18,7 +18,7 @@ const ShadowBox : FC<IShadow> = ({type, children, ...other}) => {
         }
     }
     return (
-        <div {...other} className={shadowType()}>{children}</div>
+        <div {...other} className={`box ${shadowType()}`}>{children}</div>
     )
 }
 
