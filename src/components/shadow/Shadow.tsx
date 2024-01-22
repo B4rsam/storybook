@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes, ReactNode } from "react";
+import {FC, HTMLAttributes, ReactNode} from "react";
 import './shadow.sass'
 
 type Shadows = 1 | 2;

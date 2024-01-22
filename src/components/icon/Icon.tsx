@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes} from "react";
+import {FC, HTMLAttributes} from 'react';
 import './icon.sass';
 import Warning from '../../assets/icons/Warning.svg';
 import Video from '../../assets/icons/Video.svg';
@@ -59,7 +59,7 @@ interface IIcon extends HTMLAttributes<HTMLDivElement> {
     icon: iconPack;
 }
 
-const Icon: FC<IIcon> = ({size, children, icon, ...other}) => {
+const Icon: FC<IIcon> = ({size, icon, ...other}) => {
 
     const getIcon = () => {
         switch(icon) {
