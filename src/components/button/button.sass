@@ -1,0 +1,46 @@
+@import '../../assets/palette.sass'
+
+.button
+    appearance: none
+    border: none
+    border-radius: 20px
+    &:hover
+        cursor: pointer
+
+.primary
+    color: $white
+    background-color: $primary500
+    &:hover
+        background-color: $primary600
+    &:active
+        background-color: $primary700
+
+.secondary
+    color: $black
+    background-color: $white
+    border: 1px solid
+    &:hover
+        background-color: $neutral100
+    &:active
+        background-color: $neutral400
+
+.tertiary
+    color: $black
+    background-color: rgba(0, 0, 0, 0)
+    &:hover
+        color: $primary500
+    &:active
+        color: $primary700
+
+.small
+    height: 36px
+    width: 80px
+
+.medium
+    height: 40px
+    width: 96px
+
+.large
+    border-radius: 30px !important
+    height: 48px
+    width: 104px
