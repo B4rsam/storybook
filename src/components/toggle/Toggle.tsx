@@ -3,14 +3,11 @@ import './toggle.sass';
 
 const Toggle = () => {
 
-    const handleClick = () => {
-        console.log("test");
-    }
-
     return (
-        <div className="pill" onClick={handleClick}>
-            <div className="circle"/>
-        </div>
+        <label className="pill">
+            <input type="checkbox"/>
+            <span className="circle" />
+        </label>
     )
 }
 
