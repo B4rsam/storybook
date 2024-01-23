@@ -4,7 +4,7 @@ import './form.sass';
 
 type inputTypes = "input" | "selection";
 type shapes = "pill" | "normal";
-type icons = "search" | "eye" | "both" | undefined;
+type icons = "search" | "eye" | undefined;
 interface IInput extends HTMLAttributes<HTMLInputElement> {
     inputType: inputTypes;
     placeHolder: string;
