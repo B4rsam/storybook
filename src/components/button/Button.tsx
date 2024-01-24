@@ -7,11 +7,12 @@ interface IButton extends HTMLAttributes<HTMLButtonElement> {
     btntype : buttons;
     size : buttonSize;
     children : ReactNode | undefined;
+    classname : ReactNode
 }
 
-const Button : FC<IButton> = ({btntype, children, size, ...other}) => {
+const Button : FC<IButton> = ({btntype, children, size, classname, ...other}) => {
     return (
-        <button {...other} className={`button ${size} ${btntype}`}>{children}</button>
+        <button {...other} className={`button ${size} ${btntype} ${classname}`}>{children}</button>
     )
 }
 

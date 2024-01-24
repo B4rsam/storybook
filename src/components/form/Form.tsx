@@ -23,7 +23,8 @@ const Form : FC<IInput> = ({inputType, placeHolder, shape, icon, ...other}) => {
                     <input placeholder={placeHolder} className={`field input ${shape}`} />
                 </> );
             case "selection":
-                return ( <select className={`field selection ${shape}`}>
+                return ( 
+                <select className={`field selection ${shape}`}>
                     <option>Option 1</option>
                     <option>Option 2</option>
                     <option>Option 3</option>
