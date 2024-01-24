@@ -17,7 +17,7 @@ const Modal : FC<IModal> = ({titleText, cancelBtn, submitBtn, placeholder}) => {
     return (
         <div className="modal lightShadow">
             <Button btntype="tertiary" size="small" classname="closebtn" children={<Icon size="m" icon="close"/>}/>
-            <Typography textType="subtitle1" fontStyle="normal" fontWeight={700} children={titleText}/>
+            <Typography textType="subtitle2" fontStyle="normal" fontWeight={700} children={titleText}/>
             <Form inputType="input" shape="pill" icon={undefined} placeHolder={placeholder}/>
             <div className="modalBtns">
                 <Button btntype="tertiary" size="medium" classname="auxbtn" children={cancelBtn}/>
