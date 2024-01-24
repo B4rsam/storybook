@@ -9,10 +9,6 @@
     background-color: $neutral400
     align-items: center
     cursor: pointer
-    &:has(.input:checked)
-        background-color: $primary300 !important   
-        .toggleBox
-            background-color: $primary300 !important    
 
 .toggleCircle
     height: 21px
@@ -26,6 +22,7 @@
     right: 1.5px
     bottom: 1.5px
         
-        
-
+input:checked 
+    & + .toggleBox
+        background-color: $primary300 !important
 
