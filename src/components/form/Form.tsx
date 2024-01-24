@@ -17,7 +17,11 @@ const Form : FC<IInput> = ({inputType, placeHolder, shape, icon, ...other}) => {
     const handleType = () => {
         switch(inputType) {
             case "input":
-                return ( <input placeholder={placeHolder} className={`inputField ${shape}`} /> );
+                return ( 
+                <>
+                    <i><Icon icon="search" size="s"/></i>
+                    <input placeholder={placeHolder} className={`inputField ${shape}`} />
+                </> );
             case "selection":
                 return ( <select>
                     <option>Option 1</option>

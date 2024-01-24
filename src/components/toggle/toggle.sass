@@ -1,20 +1,30 @@
 @import '../../assets/palette.sass'
 
-.pill
+.toggleBox
+    position: relative
+    display: inline-block
     height: 24px
-    width: 39px
+    width: 49px
     border-radius: 20px
-    background-color: $neutral300
-    display: flex
-    align-content: flex-start
+    background-color: $neutral400
+    align-items: center
 
-.pill input
-    appearance: none
-    width: 0px
-    height: 0px
+    input
+        appearance: none
+        &:checked + .togglebox
+            background-color: $primary300
 
-.circle
+
+.toggleCircle
     height: 21px
     width: 21px
-    background-color: $white
     border-radius: 100%
+    background-color: $white
+    cursor: pointer
+    position: absolute
+    top: 1.5px
+    left: 1.5px
+    right: 1.5px
+    bottom: .5px
+
+

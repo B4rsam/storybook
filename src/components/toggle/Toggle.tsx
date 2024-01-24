@@ -4,9 +4,9 @@ import './toggle.sass';
 const Toggle = () => {
 
     return (
-        <label className="pill">
+        <label className="toggleBox">
             <input type="checkbox"/>
-            <span className="circle" />
+            <span className="toggleCircle" />
         </label>
     )
 }
