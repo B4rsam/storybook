@@ -15,7 +15,7 @@ const Card : FC<ICard> = ({titleText, subText, caption}) => {
             <div className="textBox">
                 <Typography fontStyle="normal" fontWeight={700} textType="subtitle1" children={titleText}/>
                 <Typography fontStyle="normal" fontWeight={400} textType="subtitle2" children={subText}/>
-                <Typography fontStyle="normal" fontWeight={400} textType="body1" children={caption}/> 
+                <Typography fontStyle="normal" fontWeight={400} textType="body2" children={caption}/> 
             </div>
             
         </div>
