@@ -1,6 +1,6 @@
 @import '../../assets/palette.sass'
 
-.inputField
+.field
     appearance: none
     width: 244px
     height: 44px
@@ -8,15 +8,23 @@
     border-color: $neutral400
     background-color: $white
     color: $black
-    
-    &.hover
-        cursor: pointer
 
+    &:focus
+        border-color: $secondary-blue300 !important
+    
     &.pill
         border-radius: 30px
 
     &.normal
         border-radius: 10px
+    .input
+        display: flex
+        justify-content: space-between
 
-    &.focus
-        border-color: $secondary-blue500
+    .selection
+        width: 122px !important
+        height: 44px !important
+        text-align: center !important
+
+        &:hover
+            cursor: pointer

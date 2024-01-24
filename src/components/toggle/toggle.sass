@@ -4,16 +4,15 @@
     position: relative
     display: inline-block
     height: 24px
-    width: 49px
+    width: 43px
     border-radius: 20px
     background-color: $neutral400
     align-items: center
-
-    input
-        appearance: none
-        &:checked + .togglebox
-            background-color: $primary300
-
+    cursor: pointer
+    &:has(.input:checked)
+        background-color: $primary300 !important   
+        .toggleBox
+            background-color: $primary300 !important    
 
 .toggleCircle
     height: 21px
@@ -25,6 +24,8 @@
     top: 1.5px
     left: 1.5px
     right: 1.5px
-    bottom: .5px
+    bottom: 1.5px
+        
+        
 
 
