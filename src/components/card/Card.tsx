@@ -10,11 +10,14 @@ interface ICard extends HTMLAttributes<HTMLDivElement> {
 }
 const Card : FC<ICard> = ({titleText, subText, caption}) => {
     return (
-        <div>
+        <div className="card">
             <Avatar size="l"/>
-            <Typography fontStyle="normal" fontWeight={700} textType="subtitle1" children={titleText}/>
-            <Typography fontStyle="normal" fontWeight={400} textType="subtitle2" children={subText}/>
-            <Typography fontStyle="normal" fontWeight={400} textType="body1" children={caption}/>
+            <div className="textBox">
+                <Typography fontStyle="normal" fontWeight={700} textType="subtitle1" children={titleText}/>
+                <Typography fontStyle="normal" fontWeight={400} textType="subtitle2" children={subText}/>
+                <Typography fontStyle="normal" fontWeight={400} textType="body1" children={caption}/> 
+            </div>
+            
         </div>
     )
 }
