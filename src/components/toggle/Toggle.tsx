@@ -6,7 +6,9 @@ const Toggle = () => {
     return (
         <label className="toggleBox">
             <input type="checkbox"/>
+            <span className="toggleControl" />
             <span className="toggleCircle" />
+            
         </label>
     )
 }

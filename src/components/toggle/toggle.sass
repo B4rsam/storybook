@@ -9,6 +9,10 @@
     background-color: $neutral400
     align-items: center
     cursor: pointer
+    input
+        &:checked + .toggleControl
+            background-color: $primary300
+    
 
 .toggleCircle
     height: 21px
@@ -21,6 +25,16 @@
     left: 1.5px
     right: 1.5px
     bottom: 1.5px
-        
-.input:checked
-    background-color: $primary300 !important
+
+.toggleControl
+    position: absolute
+    display: inline-block
+    height: 24px
+    width: 43px
+    border-radius: 20px
+    background-color: $neutral400
+    align-items: center
+    cursor: pointer
+    top: 0px
+    left: 0px
+    
