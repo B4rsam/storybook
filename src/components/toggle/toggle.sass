@@ -12,30 +12,8 @@
     input
         &:checked + .toggleControl
             background-color: $primary300
-        &:checked + .toggleCircle:before
+        &:checked + .toggleControl:after
             transform: translateX(19px)
-        
-.toggleCircle
-    position: absolute
-    top: 1.5px
-    left: 1.5px
-    height: 21px
-    width: 21px
-    border-radius: 100%
-    background-color: $white
-    cursor: pointer
-    transition: .4s
-
-.toggleCircle:before
-    position: absolute
-    top: 1.5px
-    left: 1.5px
-    height: 21px
-    width: 21px
-    border-radius: 100%
-    background-color: $white
-    cursor: pointer
-    transition: .4s
 
 .toggleControl
     position: absolute
@@ -48,5 +26,16 @@
     cursor: pointer
     top: 0px
     left: 0px
-    
+    &:after
+        content: ""
+        position: absolute
+        top: 1.5px
+        left: 1.5px
+        height: 21px
+        width: 21px
+        border-radius: 100%
+        background-color: $white
+        cursor: pointer
+        transition: .4s
+
 
