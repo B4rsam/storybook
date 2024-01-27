@@ -12,7 +12,7 @@ interface IPopup extends HTMLAttributes<HTMLDivElement> {
 
 const Popup : FC<IPopup> = ({popupIcon, titleText, contentText}) => {
     return (
-        <div className="popup">
+        <div className="popup heavyShadow">
             <Icon size="xl" icon={popupIcon}/>
             <div className="popupText">
                 <Typography textType="subtitle1" fontStyle="normal" fontWeight={700} children={titleText}/>
