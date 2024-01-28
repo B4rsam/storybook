@@ -14,7 +14,7 @@ export const TextForm : Story = {
         inputType: "input",
         placeHolder: "Placeholder",
         shape: "normal",
-        icon: undefined,
+        icon: "none",
     }
 }
 
@@ -23,6 +23,6 @@ export const SelectionForm : Story = {
         inputType: "selection",
         placeHolder: "Placeholder",
         shape: "normal",
-        icon: undefined,
+        icon: "none"
     }
 }
