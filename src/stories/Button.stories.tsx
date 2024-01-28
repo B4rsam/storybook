@@ -32,3 +32,11 @@ export const TertiaryButton : Story = {
         size: "small"
     }
 }
+
+export const CircleButton : Story = {
+    args: {
+        children: "i",
+        btntype: "circle",
+        size: "small"
+    }
+}

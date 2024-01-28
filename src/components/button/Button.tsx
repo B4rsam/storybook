@@ -1,7 +1,7 @@
 import { FC, HTMLAttributes, ReactNode } from "react";
 import './button.sass';
 
-type buttons = "primary" | "secondary" | "tertiary";
+type buttons = "primary" | "secondary" | "tertiary" | "circle";
 type buttonSize = "small" | "medium" | "large";
 interface IButton extends HTMLAttributes<HTMLButtonElement> {
     btntype : buttons;
