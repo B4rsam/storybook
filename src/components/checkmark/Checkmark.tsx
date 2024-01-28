@@ -8,7 +8,7 @@ interface ICheck extends HTMLAttributes<HTMLInputElement> {
 
 const Checkmark : FC<Partial<ICheck>> = ({boxSize, ...other}) => {
     return (
-        <input type="checkbox" {...other} className={`checkbox ${boxSize}`}/>
+        <input id="chkbox" type="checkbox" {...other} className={`checkbox ${boxSize}`}/>
     )
 }
 
