@@ -18,7 +18,7 @@ const Popup : FC<IPopup> = ({popupIcon, titleText, contentText}) => {
                 <Typography textType="subtitle1" fontStyle="normal" fontWeight={700} children={titleText}/>
                 <Typography textType="body2" fontStyle="normal" fontWeight={400} children={contentText}/> 
             </div>
-            <Button size="small" btntype="tertiary" classname="popupbtn" children={<Icon icon="close" size="m" />}/>
+            <Button size="small" btntype="circle" classname="popupbtn" children={<Icon icon="close" size="m" />}/>
         </div>
     )
 }
