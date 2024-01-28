@@ -18,21 +18,21 @@ const Banner : FC<IBanner> = ({bannerType, bannerMessage}) => {
                     <div className="banner infoBanner">
                         <Icon size="m" icon="info" />
                         <Typography textType="body1" fontStyle="normal" fontWeight={400} children={bannerMessage}/>
-                        <Button btntype="tertiary" size="medium" classname="closebtn" children={<Icon size="s" icon="close"/>}/>
+                        <Button btntype="circle" size="medium" classname="closebtn" children={<Icon size="m" icon="close"/>}/>
                     </div> )
             case "alert":
                 return( 
                     <div className="banner alertBanner">
                         <Icon size="m" icon="warning"/>
                         <Typography textType="body1" fontStyle="normal" fontWeight={400} children={bannerMessage}/>
-                        <Button btntype="tertiary" size="medium" classname="closebtn" children={<Icon size="s" icon="close"/>}/>
+                        <Button btntype="circle" size="medium" classname="closebtn" children={<Icon size="m" icon="close"/>}/>
                     </div> )
             case "success":
                 return( 
                     <div className="banner successBanner">
                         <Icon size="m" icon="check"/>
                         <Typography textType="body1" fontStyle="normal" fontWeight={400} children={bannerMessage}/>
-                        <Button btntype="tertiary" size="medium" classname="closebtn" children={<Icon size="s" icon="close"/>}/>
+                        <Button btntype="circle" size="medium" classname="closebtn" children={<Icon size="m" icon="close"/>}/>
                     </div> )
         }
     }

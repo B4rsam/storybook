@@ -8,6 +8,7 @@ interface ICard extends HTMLAttributes<HTMLDivElement> {
     subText : string;
     caption : string;
 }
+
 const Card : FC<ICard> = ({titleText, subText, caption}) => {
     return (
         <div className="card">
