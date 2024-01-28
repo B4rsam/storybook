@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import CornerDisplay from '../components/cornerDisplay/CornerDisplay';
+import CornerDisplay from '@/components/cornerDisplay/CornerDisplay';
 
 const meta = {
     title: "Corners",
