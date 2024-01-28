@@ -59,7 +59,7 @@ interface IIcon extends HTMLAttributes<HTMLDivElement> {
     icon: iconPack;
 }
 
-const Icon: FC<IIcon> = ({size, icon, ...other}) => {
+const Icon: FC<IIcon> = ({size, icon, className, ...other}) => {
 
     const getIcon = () => {
         switch(icon) {
@@ -171,7 +171,7 @@ const Icon: FC<IIcon> = ({size, icon, ...other}) => {
     }
 
     return (
-        <div {...other} className={`icon ${icon} ${size}`}>{getIcon()}</div>
+        <div {...other} className={`icon ${icon} ${size} ${className}`}>{getIcon()}</div>
     )
 }
 
