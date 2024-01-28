@@ -17,11 +17,28 @@ const Form : FC<IInput> = ({inputType, placeHolder, shape, icon, ...other}) => {
     const handleType = () => {
         switch(inputType) {
             case "input":
-                return ( 
-                <>
-                    <i><Icon icon="search" size="s"/></i>
-                    <input placeholder={placeHolder} className={`field input ${shape}`} />
-                </> );
+                    switch(icon) {
+                        case "search":
+                            return (
+                                <div className={`field input ${shape}`}>
+                                    <i><Icon size="s" icon="search"/></i>
+                                    <input type="text" placeholder={placeHolder} />
+                                </div>
+                            )
+                        case "eye":
+                            return (
+                                <div className={`field input ${shape}`}>
+                                    <i><Icon size="s" icon="eye"/></i>
+                                    <input type="text" placeholder={placeHolder} />
+                                </div>
+                            )
+                        case undefined:
+                            return (
+                                <div className={`field input ${shape}`}>
+                                    <input type="text" placeholder={placeHolder} />
+                                </div>
+                            )
+                    } 
             case "selection":
                 return ( 
                 <select className={`field selection ${shape}`}>
