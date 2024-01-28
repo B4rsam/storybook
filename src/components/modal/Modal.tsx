@@ -16,9 +16,9 @@ interface IModal extends HTMLAttributes<HTMLDivElement> {
 const Modal : FC<IModal> = ({titleText, cancelBtn, submitBtn, placeholder}) => {
     return (
         <div className="modal lightShadow">
-            <Button btntype="tertiary" size="small" classname="closebtn" children={<Icon size="m" icon="close"/>}/>
+            <Button btntype="circle" size="small" classname="closebtn" children={<Icon size="m" icon="close"/>}/>
             <Typography textType="subtitle2" fontStyle="normal" fontWeight={700} children={titleText}/>
-            <Form inputType="input" shape="pill" icon={undefined} placeHolder={placeholder}/>
+            <Form inputType="input" shape="pill" icon={"none"} placeHolder={placeholder}/>
             <div className="modalBtns">
                 <Button btntype="tertiary" size="medium" classname="auxbtn" children={cancelBtn}/>
                 <Button btntype="primary" size="medium" classname="mainbtn" children={submitBtn}/>
