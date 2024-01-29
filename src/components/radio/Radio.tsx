@@ -1,5 +1,5 @@
-import {FC, HTMLAttributes, ReactNode} from "react";
-import './radio.sass'
+import {FC, HTMLAttributes } from "react";
+import s from './radio.module.sass'
 
 interface IRadio extends HTMLAttributes<HTMLInputElement> {
     radioName: string
@@ -7,9 +7,9 @@ interface IRadio extends HTMLAttributes<HTMLInputElement> {
 
 const Radio : FC<IRadio> = ({radioName}) => {
     return (
-       <form className='radioHolder'>
-            <input type="radio" className="radioButton" name={radioName}/>
-            <input type="radio" className="radioButton" name={radioName}/>
+       <form className={s.radioHolder}>
+            <input type="radio" className={s.radioButton} name={radioName}/>
+            <input type="radio" className={s.radioButton} name={radioName}/>
        </form>
     )
 }
