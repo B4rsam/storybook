@@ -2,7 +2,10 @@
 
 .checkboxContainer
     position: relative
-    background-color: $neutral300
+    display: inline-block
+    background-color: $white
+    border: 1px solid
+    border-color: $black
     border-radius: 20%
     cursor: pointer
 
@@ -14,21 +17,43 @@
         height: 24px
         width: 24px
 
-    .checkbox
+    input
         appearance: none
+        &:checked + .checkboxControl
+            background-color: $primary500
+            content: url("../../assets/checkmark/check-svgrepo-com-2.svg")
 
-        &:checked + .checkLabel
-            background-color: $primary400
-
-.checkLabel
+.checkboxControl
     position: absolute
-    background-color: $neutral300
-    height: 100%
-    width: 100%
+    top: -1px
+    left: -1px
+    background-color: rgba(0,0,0,0)
     border-radius: 20%
+    border: 1px solid
+
+    &.small
+        height: 16px
+        width: 16px
+    
+    &.medium
+        height: 24px
+        width: 24px
+
+.checkIcon
+    position: absolute
     top: 0px
     left: 0px
-    cursor: pointer
-    .icon
-        background-color: rgba(0,0,0,0)
+    z-index: 2
+    background-color: rgba(0,0,0,0)
+    color: white
+    border-radius: 20%
+
+    &.small
+        height: 16px
+        width: 16px
+    
+    &.medium
+        height: 24px
+        width: 24px
+    
         
