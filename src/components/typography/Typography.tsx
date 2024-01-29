@@ -11,10 +11,10 @@ interface IText extends HTMLAttributes<HTMLParagraphElement> {
     children: ReactNode | undefined;
 }
 
-const Typography: FC<Partial<IText>> = ({textType,  fontWeight, children, fontStyle,...other}) => {
+const Typography: FC<Partial<IText>> = ({textType,  fontWeight, children, fontStyle, className, ...other}) => {
 
     return (
-        <p {...other} className={`${textType}${fontWeight ? ` fw-${fontWeight}` : ``}${fontStyle ? ` ${fontStyle}` : ` normal`}`} >{children}</p>
+        <p {...other} className={`${textType}${fontWeight ? ` fw-${fontWeight}` : ``}${fontStyle ? ` ${fontStyle}` : ` normal`} ${className}`} >{children}</p>
     )
 }
 
