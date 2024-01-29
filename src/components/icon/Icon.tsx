@@ -1,5 +1,5 @@
 import {FC, HTMLAttributes} from 'react';
-import './icon.sass';
+import s from './icon.module.sass';
 import Warning from '../../assets/icons/Warning.svg';
 import Video from '../../assets/icons/Video.svg';
 import Unlock from '../../assets/icons/Unlock.svg';
@@ -171,7 +171,7 @@ const Icon: FC<IIcon> = ({size, icon, className, ...other}) => {
     }
 
     return (
-        <div {...other} className={`icon ${icon} ${size} ${className}`}>{getIcon()}</div>
+        <div {...other} className={`${s.icon} ${icon} ${size} ${className}`}>{getIcon()}</div>
     )
 }
 

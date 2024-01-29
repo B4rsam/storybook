@@ -1,5 +1,5 @@
 import {FC, HTMLAttributes, ReactNode} from "react";
-import s from './shadow.module.sass'
+import './shadow.sass'
 
 type Shadows = 1 | 2;
 interface IShadow extends HTMLAttributes<HTMLDivElement> {
@@ -18,7 +18,7 @@ const ShadowBox : FC<IShadow> = ({type = 2, children, ...other}) => {
         }
     }
     return (
-        <div {...other} className={`${s.box} ${shadowType()}`}>{children}</div>
+        <div {...other} className={`box ${shadowType()}`}>{children}</div>
     )
 }
 
