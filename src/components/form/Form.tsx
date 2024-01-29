@@ -12,7 +12,7 @@ interface IInput extends HTMLAttributes<HTMLInputElement> {
     icon: icons;
 }
 
-const Form : FC<IInput> = ({inputType, placeHolder, shape, icon, ...other}) => {
+const Form : FC<IInput> = ({inputType, placeHolder, shape, icon, className, ...other}) => {
 
     const handleType = () => {
         switch(inputType) {
@@ -20,28 +20,28 @@ const Form : FC<IInput> = ({inputType, placeHolder, shape, icon, ...other}) => {
                     switch(icon) {
                         case "search":
                             return (
-                                <div className={`field input ${shape}`}>
+                                <div className={`field input ${shape} ${className}`}>
                                     <i><Icon size="s" icon="search"/></i>
                                     <input type="text" placeholder={placeHolder} />
                                 </div>
                             )
                         case "eye":
                             return (
-                                <div className={`field input ${shape}`}>
+                                <div className={`field input ${shape} ${className}`}>
                                     <i><Icon size="s" icon="eye"/></i>
                                     <input type="text" placeholder={placeHolder} />
                                 </div>
                             )
                         case "none":
                             return (
-                                <div className={`field input ${shape}`}>
+                                <div className={`field input ${shape} ${className}`}>
                                     <input type="text" placeholder={placeHolder} />
                                 </div>
                             )
                     } 
             case "selection":
                 return ( 
-                <select className={`field selection ${shape}`}>
+                <select className={`field selection ${shape} ${className}`}>
                     <option>Option 1</option>
                     <option>Option 2</option>
                     <option>Option 3</option>
