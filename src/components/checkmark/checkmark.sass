@@ -1,16 +1,10 @@
 @import '../../assets/palette.sass'
 
-.checkbox
-    appearance: none
-    border: 2px block
+.checkboxContainer
+    position: relative
+    background-color: $neutral300
     border-radius: 20%
-    border-color: $black
-    background-color: $neutral200
-    &:hover
-        cursor: pointer
-    
-    &:checked
-        background-color: $primary500 !important
+    cursor: pointer
 
     &.small
         height: 16px
@@ -19,3 +13,22 @@
     &.medium
         height: 24px
         width: 24px
+
+    .checkbox
+        appearance: none
+
+        &:checked + .checkLabel
+            background-color: $primary400
+
+.checkLabel
+    position: absolute
+    background-color: $neutral300
+    height: 100%
+    width: 100%
+    border-radius: 20%
+    top: 0px
+    left: 0px
+    cursor: pointer
+    .icon
+        background-color: rgba(0,0,0,0)
+        

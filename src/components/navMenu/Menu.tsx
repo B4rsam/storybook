@@ -1,7 +1,7 @@
 import {FC, HTMLAttributes, ReactNode} from "react";
 import Logo from "../logo/Logo";
 import Button from "../button/Button";
-import './menu.sass';
+import s from './menu.module.sass';
 
 type validLogos = "dark" | "light";
 type btnTypes = "primary" | "secondary" | "tertiary";
@@ -24,9 +24,9 @@ interface IMenu extends HTMLAttributes<HTMLDivElement> {
 
 const MenuBar : FC<IMenu> = ({logoType, logoText, btntype1, btntype2, btntype3, btntype4, btntype5, btnSizes, btntext1, btntext2, btntext3, btntext4, btntext5}) => {
     return (
-        <div className="menuBar">
+        <div className={s.menuBar}>
             <Logo logoType={logoType} children={logoText}/>
-            <div className="buttonHolder">
+            <div className={s.buttonHolder}>
                 <Button btntype={btntype1} children={btntext1} size={btnSizes}/>
                 <Button btntype={btntype2} children={btntext2} size={btnSizes}/>
                 <Button btntype={btntype3} children={btntext3} size={btnSizes}/>
