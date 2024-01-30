@@ -3,19 +3,18 @@ import TableCells from './TableCell';
 
 interface IHead extends HTMLAttributes<HTMLTableElement> {
     headContent: Array<string>;
-    columnCount: number;
 }
 
-const TableHead : FC<IHead>= ({headContent, columnCount}) => {
+const TableHead : FC<IHead>= ({headContent}) => {
     const handleColumns = () => {
         headContent.map((item) => {
             return ( <TableCells content={item}/>)
         })
     }
     return (
-        <th>
-            {handleColumns()}
-        </th>
+        <thead>
+            {headContent.map((item) => <TableCells content={item}/>)}
+        </thead>
     )
 }
 

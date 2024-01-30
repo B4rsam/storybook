@@ -8,15 +8,9 @@ interface ITBody extends HTMLAttributes<HTMLTableElement> {
 
 const TableBody : FC<ITBody>= ({tableContent}) => {
 
-    const rowInsertion = () => {
-        tableContent.map((item) => {
-            return (<TableRow data={item}/>)
-        })
-    }
-
     return (
         <tbody>
-            {rowInsertion()}
+            {tableContent.map((item) => <TableRow data={item} />)}
         </tbody>
     )
 }

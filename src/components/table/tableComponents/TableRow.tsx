@@ -8,13 +8,16 @@ interface IRow extends HTMLAttributes<HTMLTableElement> {
 const TableRow : FC<IRow>= ({data}) => {
 
     const dataInsertion = () => {
-        data.map((item) => {
-            return (<TableCells content={item}/>)
-        })
+        return (
+            data.map((item) => {
+                <TableCells content={item}/>
+            }) 
+        )
+        
     }
     return (
         <tr>
-            {dataInsertion()}
+            {data.map((item) => <TableCells content={item}/>)}
         </tr>
     )
 }
