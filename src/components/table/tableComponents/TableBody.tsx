@@ -6,10 +6,10 @@ interface ITBody extends HTMLAttributes<HTMLTableElement> {
     data: Array<string>;
 }
 
-const TableBody : FC<ITBody>= ({tableContent}) => {
+const TableBody : FC<ITBody>= ({tableContent, className}) => {
 
     return (
-        <tbody>
+        <tbody className={className}>
             {tableContent.map((item) => <TableRow data={item} />)}
         </tbody>
     )

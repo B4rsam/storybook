@@ -1,20 +1,19 @@
 import { FC, HTMLAttributes, ReactNode } from 'react'
 import TableHead from './tableComponents/TableHead';
 import TableBody from './tableComponents/TableBody';
-import './table.module.sass'
+import s from './table.module.sass'
 
 interface ITable extends HTMLAttributes<HTMLTableElement> {
     headerContent: Array<string>;
     tableContent: Array<Array<string>>;
     withHead: boolean;
-    columnCount: number;
 }
 
-const Table : FC<ITable>= ({className, headerContent, withHead, columnCount, tableContent}) => {
+const Table : FC<ITable>= ({className, headerContent, withHead, tableContent}) => {
     return (
-        <table className={className}>
-            {withHead ? <TableHead headContent={headerContent} columnCount={columnCount}/> : ""}
-            <TableBody tableContent={tableContent}/>
+        <table className={`${s.table} ${className}`}>
+            {withHead ? <TableHead className={s.tableHead} headContent={headerContent}/> : ""}
+            <TableBody className={s.tableBody} tableContent={tableContent}/>
         </table>
     )
 }
