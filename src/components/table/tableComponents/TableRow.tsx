@@ -17,7 +17,7 @@ const TableRow : FC<IRow>= ({data}) => {
     }
     return (
         <tr>
-            {data.map((item) => <TableCells content={item}/>)}
+            {data.map((item) => <TableCells key={item} content={item}/>)}
         </tr>
     )
 }

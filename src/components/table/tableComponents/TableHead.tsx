@@ -6,14 +6,10 @@ interface IHead extends HTMLAttributes<HTMLTableElement> {
 }
 
 const TableHead : FC<IHead>= ({headContent, className}) => {
-    const handleColumns = () => {
-        headContent.map((item) => {
-            return ( <TableCells content={item}/>)
-        })
-    }
+
     return (
         <thead className={className}>
-            {headContent.map((item) => <TableCells content={item}/>)}
+            {headContent.map((item) => <TableCells key={item} content={item}/>)}
         </thead>
     )
 }

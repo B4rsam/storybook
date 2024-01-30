@@ -10,7 +10,7 @@ const TableBody : FC<ITBody>= ({tableContent, className}) => {
 
     return (
         <tbody className={className}>
-            {tableContent.map((item) => <TableRow data={item} />)}
+            {tableContent.map((item, index) => <TableRow key={index} data={item} />)}
         </tbody>
     )
 }
