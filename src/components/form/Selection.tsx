@@ -9,7 +9,7 @@ interface IInput extends HTMLAttributes<HTMLSelectElement> {
 
 const Selection : FC<IInput>= ({shape, className, options = [], ...other}) => {
     return (
-        <select {...other} className={`selection ${s.field} ${s[shape]} ${className}`}>
+        <select {...other} className={`selection ${s.selection} ${s[shape]} ${className}`}>
             {options.map((item) => <option key={useId()} value={item.value}>{item.label}</option>)}
         </select>
     )
