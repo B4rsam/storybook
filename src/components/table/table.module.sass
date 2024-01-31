@@ -1,15 +1,27 @@
 @import '../../assets/palette.sass'
 
 .table
-    background-color: $neutral200 
+    
     width: 100%
     text-align: center
     padding: 0px
-    justify-content: space-evenly
-
     .tableHead
-        margin-inline: 0px
         width: 100%
-        background-color: $neutral400 !important
+        background-color: $neutral500 !important
         font-weight: 700
+
+    .tableRow
+        margin: 0px
+
+    .tableCell
+        max-width: 30px
+        max-height: 15px
+        margin: 0px
+        padding: 4px
+
+    .tableBody
+        tr:nth-child(odd)
+            background-color: $neutral200
+        tr:nth-child(even)
+            background-color: $neutral300
 
