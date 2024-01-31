@@ -1,5 +1,5 @@
 import { FC, HTMLAttributes, ReactNode } from "react";
-import './cornerdisplay.sass';
+import s from './cornerdisplay.module.sass';
 
 type validTypes = "card" | "input";
 interface ICorner extends HTMLAttributes<HTMLDivElement> {
@@ -9,7 +9,7 @@ interface ICorner extends HTMLAttributes<HTMLDivElement> {
 
 const CornerDisplay : FC<ICorner> = ({type, children, ...other}) => {
     return (
-        <div {...other} className={`main ${type ? type : `card`}`}>{children}</div>
+        <div {...other} className={`${s.main} ${type ? s[type] : `${s.card}`}`}>{children}</div>
     )
 }
 
