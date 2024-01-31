@@ -9,7 +9,9 @@ const TableHead : FC<IHead>= ({headContent, className}) => {
 
     return (
         <thead className={className}>
-            {headContent.map((item) => <TableCells key={item} content={item}/>)}
+            <tr>
+                {headContent.map((item) => <TableCells key={item} content={item}/>)}
+            </tr>
         </thead>
     )
 }
