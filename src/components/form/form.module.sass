@@ -1,0 +1,26 @@
+@import '../../assets/palette.sass'
+
+.field
+    width: 244px
+    height: 44px
+    display: flex
+    align-items: center
+    border: 3px solid
+    border-color: $neutral300
+    padding-inline: 3px
+
+    .icon
+        background-color: rgba(0,0,0,0) !important
+    
+    &.pill
+        border-radius: 30px
+    &.normal
+        border-radius: 10px
+    input
+        height: 44px
+        width: 224px
+        appearance: none
+        background-color: rgba(0,0,0,0)
+        border: none
+        &:focus
+            outline: none
