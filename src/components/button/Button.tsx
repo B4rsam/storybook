@@ -1,5 +1,5 @@
 import { FC, HTMLAttributes, ReactNode } from "react";
-import './button.sass';
+import s from './button.module.sass';
 
 type buttons = "primary" | "secondary" | "tertiary" | "circle";
 type buttonSize = "small" | "medium" | "large";
@@ -12,7 +12,7 @@ interface IButton extends HTMLAttributes<HTMLButtonElement> {
 
 const Button : FC<IButton> = ({btntype, children, size, classname, ...other}) => {
     return (
-        <button {...other} className={`button ${size} ${btntype} ${classname}`}>{children}</button>
+        <button {...other} className={`${s.button} ${s[size]} ${s[btntype]} ${classname}`}>{children}</button>
     )
 }
 
