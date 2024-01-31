@@ -1,12 +1,11 @@
-import {FC, HTMLAttributes, ReactNode} from "react";
-import './toggle.sass';
+import s from './toggle.module.sass';
 
 const Toggle = () => {
 
     return (
-        <label className="toggleBox">
+        <label className={s.toggleBox}>
             <input type="checkbox"/>
-            <span className="toggleControl" />
+            <span className={s.toggleControl} />
         </label>
     )
 }
