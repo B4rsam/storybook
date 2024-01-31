@@ -2,7 +2,7 @@ import { FC, HTMLAttributes } from 'react'
 import s from '../table.module.sass'
 
 interface ICell extends HTMLAttributes<HTMLTableElement> {
-    content: string;
+    content: any;
 }
 
 const TableCells : FC<ICell> = ({content}) => {

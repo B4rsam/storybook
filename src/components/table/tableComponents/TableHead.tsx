@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes } from 'react'
+import { FC, HTMLAttributes, useId } from 'react'
 import TableCells from './TableCell';
 
 interface IHead extends HTMLAttributes<HTMLTableElement> {
@@ -10,7 +10,7 @@ const TableHead : FC<IHead>= ({headContent, className}) => {
     return (
         <thead className={className}>
             <tr>
-                {headContent.map((item) => <TableCells key={item} content={item}/>)}
+                {headContent.map((item) => <TableCells key={useId()} content={item}/>)}
             </tr>
         </thead>
     )

@@ -11,18 +11,8 @@ type Story = StoryObj<typeof meta>;
 
 export const TextForm : Story = {
     args: {
-        inputType: "input",
         placeHolder: "Placeholder",
         shape: "normal",
         icon: "none",
-    }
-}
-
-export const SelectionForm : Story = {
-    args: {
-        inputType: "selection",
-        placeHolder: "Placeholder",
-        shape: "normal",
-        icon: "none"
     }
 }
