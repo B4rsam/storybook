@@ -171,7 +171,7 @@ const Icon: FC<IIcon> = ({size, icon, className, ...other}) => {
     }
 
     return (
-        <div {...other} className={`${s.icon} ${icon} ${size} ${className}`}>{getIcon()}</div>
+        <div {...other} className={`${icon} ${s.icon} ${s[size]} ${className}`}>{getIcon()}</div>
     )
 }
 
