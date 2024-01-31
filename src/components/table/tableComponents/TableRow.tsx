@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes } from 'react'
+import { FC, HTMLAttributes, useId } from 'react'
 import TableCells from './TableCell'
 import s from '../table.module.sass'
 
@@ -9,7 +9,7 @@ interface IRow extends HTMLAttributes<HTMLTableElement> {
 const TableRow : FC<IRow>= ({data}) => {
     return (
         <tr className={s.tableRow}>
-            {data.map((item) => <TableCells key={item} content={item}/>)}
+            {data.map((item) => <TableCells key={useId()} content={item}/>)}
         </tr>
     )
 }
