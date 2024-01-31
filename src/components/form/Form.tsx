@@ -21,14 +21,14 @@ const Form : FC<IInput> = ({inputType, placeHolder, shape, icon, className, ...o
                         case "search":
                             return (
                                 <div className={`field input ${shape} ${className}`}>
-                                    <i><Icon size="s" icon="search"/></i>
+                                    <i><Icon className="icon" size="s" icon="search"/></i>
                                     <input type="text" placeholder={placeHolder} />
                                 </div>
                             )
                         case "eye":
                             return (
                                 <div className={`field input ${shape} ${className}`}>
-                                    <i><Icon size="s" icon="eye"/></i>
+                                    <i><Icon className="icon" size="s" icon="eye"/></i>
                                     <input type="text" placeholder={placeHolder} />
                                 </div>
                             )

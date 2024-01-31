@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes, ReactNode } from 'react'
+import { FC, HTMLAttributes } from 'react'
 import TableCells from './TableCell';
 
 interface IHead extends HTMLAttributes<HTMLTableElement> {
