@@ -3,7 +3,6 @@ import TableRow from './TableRow';
 
 interface ITBody extends HTMLAttributes<HTMLTableElement> {
     tableContent: Array<Array<string>>;
-    data: Array<string>;
 }
 
 const TableBody : FC<ITBody>= ({tableContent, className}) => {
