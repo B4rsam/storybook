@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes } from "react";
+import { FC, HTMLAttributes, ReactNode } from "react";
 import Typography from "../typography/Typography";
 import Button from "../button/Button";
 import Form from "../form/Form";
@@ -8,20 +8,25 @@ import s from './modal.module.sass';
 
 interface IModal extends HTMLAttributes<HTMLDivElement> {
     titleText: string;
-    cancelBtn: string;
-    submitBtn: string;
+    cancelBtn?: string;
+    submitBtn?: string;
     placeholder: string;
+    children?: ReactNode;
+    handleSubmit?: () => {} | undefined;
+    handleCancel?: () => {} | undefined;
+    handleClose?: () => {} | undefined;
 }
 
-const Modal : FC<IModal> = ({titleText, cancelBtn, submitBtn, placeholder}) => {
+const Modal : FC<IModal> = ({titleText, cancelBtn, submitBtn, placeholder, children, handleSubmit, handleCancel, handleClose}) => {
     return (
         <div className={`lightShadow ${s.modal}`}>
-            <Button btntype="circle" size="small" classname={s.closebtn} children={<Icon className={s.icon} size="m" icon="close"/>}/>
+            <Button onClick={handleClose} btntype="circle" size="small" classname={s.closebtn} children={<Icon className={s.icon} size="m" icon="close"/>}/>
             <Typography textType="subtitle2" fontStyle="normal" fontWeight={700} children={titleText}/>
-            <Form inputType="input" className={s.field} shape="pill" icon={"none"} placeHolder={placeholder}/>
+            {children}
+            <Form className={s.field} shape="pill" icon={"none"} placeHolder={placeholder}/>
             <div className={s.modalBtns}>
-                <Button btntype="tertiary" size="medium" classname={s.auxbtn} children={cancelBtn}/>
-                <Button btntype="primary" size="medium" classname={s.mainbtn} children={submitBtn}/>
+                <Button btntype="tertiary" size="medium" classname={s.auxbtn} onClick={handleCancel} children={cancelBtn}/>
+                <Button btntype="primary" size="medium" classname={s.mainbtn} onClick={handleSubmit} children={submitBtn}/>
             </div>
         </div>
     )
