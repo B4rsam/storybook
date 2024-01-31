@@ -1,7 +1,7 @@
 import {FC, HTMLAttributes, ReactNode} from "react";
 import Avatar from "../avatar/Avatar";
 import Typography from "../typography/Typography";
-import './logo.sass';
+import s from './logo.module.sass';
 
 type logoTypes = "light" | "dark";
 interface ILogo extends HTMLAttributes<HTMLDivElement> {
@@ -11,7 +11,7 @@ interface ILogo extends HTMLAttributes<HTMLDivElement> {
 
 const Logo : FC<ILogo> = ({logoType, children, ...other}) => {
     return (
-        <div className={`logo ${logoType}`}>
+        <div className={`${s.logo} ${s[logoType]}`}>
             <Typography textType="header3" fontWeight={700} fontStyle="normal" >{children}</Typography>
             <Avatar size={"l"}/>
         </div>
