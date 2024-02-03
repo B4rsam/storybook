@@ -51,3 +51,21 @@ node 16.15.0
 
 [classnames 2.5.1](https://github.com/JedWatson/classnames)
 
+## Usage
+
+First, install the package:
+
+`npm install storybook-training`
+
+Then import the modules you need, for example:
+
+`import { Button, Logo, Modal} from storybook-training`
+
+And finally, use the components in your project:
+
+`const coolComponent = () => {`
+`   return(`
+`       <Button btnType="primary" size="medium" children="Click me" classname="btn" />`
+`       )}`
+
+
