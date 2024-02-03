@@ -19,7 +19,7 @@ const MenuBar : FC<IMenu> = ({logoType, logoText, btnList, btnSizes}) => {
         <div className={s.menuBar}>
             <Logo logoType={logoType} children={logoText}/>
             <div className={s.buttonHolder}>
-                {btnList.map((item) => <Button children={item.children} btntype={item.type} size={btnSizes} />)}
+                {btnList.map((item) => <Button children={item.children} btntype={item.type} size={btnSizes} classname="navBtn"/>)}
             </div>
         </div>
     )
