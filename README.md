@@ -7,20 +7,35 @@ This is a small project I worked on during my front-end web design internship to
 Includes [React](https://react.dev/reference/react/Component) components for many design elements.
 As of writing the components are:
 >Avatars
+
 >Banners
+>
 >Buttons
+>
 >Cards
+>
 >Checkbox
+>
 >Input and Selection forms
+>
 >Icons
+>
 >Logos
+>
 >Menu/Navigation bar
+>
 >Modals
+>
 >Popups
+>
 >Radio buttons
+>
 >Element shadows
+>
 >Tables
+>
 >Toggle switch
+>
 >Typography for written text
 
 ## Dependencies
