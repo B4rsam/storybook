@@ -13,19 +13,8 @@ export const NavigationBar : Story = {
     args: {
         logoType: "light",
         logoText: "Logo",
-
-        btntype1: "tertiary",
-        btntype2: "tertiary",
-        btntype3: "tertiary",
-        btntype4: "tertiary",
-        btntype5: "primary",
-
-        btntext1: "Click me",
-        btntext2: "Click me",
-        btntext3: "Click me",
-        btntext4: "Click me",
-        btntext5: "Im Important!",
-
+        btnList: [{children: "Click Me", type: "tertiary"},
+                  {children: "Click Me", type: "primary"}],
         btnSizes: "medium",
     }
 }
