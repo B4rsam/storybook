@@ -7,7 +7,7 @@ This is a small project I worked on during my front-end web design internship to
 Includes [React](https://react.dev/reference/react/Component) components for many design elements.
 As of writing the components are:
 >Avatars
-
+>
 >Banners
 >
 >Buttons
@@ -39,7 +39,11 @@ As of writing the components are:
 >Typography for written text
 
 ## Dependencies
-[Storybook 0.16.0](https://github.com/storybookjs/storybook)
+[Storybook 7.6.12](https://github.com/storybookjs/storybook)
+
 [React 18.2.0](https://react.dev)
+
 [Sass 1.70.0](https://sass-lang.com)
+
+[classnames 2.5.1](https://github.com/JedWatson/classnames)
 
