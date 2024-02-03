@@ -1,4 +1,4 @@
-import {FC, HTMLAttributes, ReactNode} from "react";
+import {FC, HTMLAttributes, ReactNode, useId} from "react";
 import Logo from "../logo/Logo";
 import Button from "../button/Button";
 import s from './menu.module.sass';
@@ -19,7 +19,7 @@ const MenuBar : FC<IMenu> = ({logoType, logoText, btnList, btnSizes}) => {
         <div className={s.menuBar}>
             <Logo logoType={logoType} children={logoText}/>
             <div className={s.buttonHolder}>
-                {btnList.map((item) => <Button children={item.children} btntype={item.type} size={btnSizes} classname="navBtn"/>)}
+                {btnList.map((item) => <Button key={useId()} children={item.children} btntype={item.type} size={btnSizes} classname="navBtn"/>)}
             </div>
         </div>
     )
