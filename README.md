@@ -61,11 +61,6 @@ Then import the modules you need, for example:
 
 `import { Button, Logo, Modal} from storybook-training`
 
-And finally, use the components in your project:
-
-`const coolComponent = () => {`
-`   return(`
-`       <Button btnType="primary" size="medium" children="Click me" classname="btn" />`
-`       )}`
+And finally, you can use the components within your project!
 
 
