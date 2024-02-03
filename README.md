@@ -39,6 +39,10 @@ As of writing the components are:
 >Typography for written text
 
 ## Dependencies
+npm 8.5.5
+
+node 16.15.0
+
 [Storybook 7.6.12](https://github.com/storybookjs/storybook)
 
 [React 18.2.0](https://react.dev)
